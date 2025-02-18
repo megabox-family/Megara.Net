@@ -1,0 +1,14 @@
+﻿services:
+#  megara.net.client:
+#    image: megara.net.client
+#    build:
+#      context: .
+#      dockerfile: Megara.Net/Megara.Net.Client/Dockerfile
+
+  megara.net:
+    image: megara.net
+    build:
+      context: .
+      dockerfile: Megara.Net/Megara.Net/Dockerfile
+    ports:
+      - 8080:8080
