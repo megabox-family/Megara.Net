@@ -1,0 +1,22 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  megara.net:
+    build:
+      context: "/Users/ninbura/repos/Megara.Net"
+      dockerfile: "Megara.Net/Megara.Net/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net9.0/Megara.Net.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_STATICWEBASSETS: "/app/bin/Debug/net9.0/Megara.Net.staticwebassets.runtime.CT.json"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "megara.net:dev"
+    ports: []
+    volumes:
+    - "/Users/ninbura/repos/Megara.Net/Megara.Net/Megara.Net:/app:rw"
+    - "/Users/ninbura/repos/Megara.Net:/src:rw"
+    - "/Users/ninbura/.nuget/packages:/home/app/.nuget/packages"
+    working_dir: "/app"
